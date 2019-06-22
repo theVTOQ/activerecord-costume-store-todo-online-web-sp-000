@@ -10,26 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 4) do
+ActiveRecord::Schema.define(version: 5) do
 
   create_table "costume_stores", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.integer "inventory"
     t.integer "num_of_employees"
     t.boolean "still_in_business"
     t.datetime "opening_time"
     t.datetime "closing_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "costume_inventory"
   end
 
   create_table "costumes", force: :cascade do |t|
     t.string "name"
     t.float "price"
     t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.text "size"
   end
 
